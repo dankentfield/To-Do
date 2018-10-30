@@ -8,6 +8,7 @@ export class TaskList extends Component {
     return (
       <div className="App">
         <Task />
+        <h1>Hi</h1>
       </div>
     );
   }
