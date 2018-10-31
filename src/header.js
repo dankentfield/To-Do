@@ -12,9 +12,11 @@ export class Header extends Component {
       }
 
     handleSubmit(e){
-        e.preventDefault(); 
         //This stops the page refreshing when onClick is called inside a form. 
-        const taskVal = this.taskInput.current.value;
+        e.preventDefault(); 
+        //taskVal is a variable object containing the value of the input field and a unique key generated form the date and time.
+        const taskVal = {text: this.taskInput.current.value, key: Date.now()}
+        //This passes the taskVal variable (containing input object) taskVal into the function passed as a prop 'addTask'
         this.props.addTask(taskVal);
     }
 

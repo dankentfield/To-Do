@@ -31,8 +31,9 @@ class App extends Component {
     return (
       <div className="App">
         <Header addTask={this.addNewTask}/>
-        <TaskList />
-        <h1>{console.log(this.state.arrtaskList)}</h1>
+        {/* Passing the arrTaskList state as props to the TaskList component so it can access the state. */} 
+        <TaskList task={this.state.arrtaskList}/>
+        
       </div>
     );
   }
