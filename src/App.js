@@ -24,6 +24,7 @@ class App extends Component {
     arrtaskListNew.push(newTask);
     //update the tasklist array in state to the value of the temp array (added in the new task)
     this.setState({arrtaskList: arrtaskListNew});
+    this.setState({inputVal:''});
   }
     
 

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 import './App.css';
 
 export class Task extends Component {
@@ -7,7 +9,8 @@ export class Task extends Component {
   //This function is passed into .map in the render method below. It takes item as an argument which contains the array arrTaskList.
   createTasks(item){
     //This takes the values from the passed in array and outputs a list element with key and text attributes.
-    return <li key={item.key} >{item.text}</li>
+    return <ListItem className="Task-list" button={true} divider={true} key={item.key}>{item.text}</ListItem>
+    
   }
 
   render() {
@@ -17,10 +20,12 @@ export class Task extends Component {
     let taskList = taskArr.map(this.createTasks); 
 
     return (
-      <div className="App">
+      
+        <List>
         {/* This will render all of the items in the arrItemList array - displaying all of the tasks */}
-        <ul>{taskList}</ul>
-      </div>
+        {taskList}
+        </List>
+      
     );
   }
 }
