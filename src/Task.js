@@ -9,7 +9,13 @@ export class Task extends Component {
   //This function is passed into .map in the render method below. It takes item as an argument which contains the array arrTaskList.
   createTasks(item){
     //This takes the values from the passed in array and outputs a list element with key and text attributes.
-    return <ListItem className="Task-list" button={true} divider={true} key={item.key}>{item.text}</ListItem>
+    return <ListItem 
+              
+              button={true} 
+              divider={true} 
+              key={item.key}>
+            {item.text}
+          </ListItem>
     
   }
 
@@ -21,11 +27,12 @@ export class Task extends Component {
 
     return (
       
-        <List>
-        {/* This will render all of the items in the arrItemList array - displaying all of the tasks */}
-        {taskList}
-        </List>
-      
+        <div className="Task-List">
+          <List>
+          {/* This will render all of the items in the arrItemList array - displaying all of the tasks */}
+          {taskList}
+          </List>
+        </div>
     );
   }
 }
