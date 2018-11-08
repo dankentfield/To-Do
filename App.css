@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto;
+ 
+}
+
+#header {
+  background-color: #282c34;
+  min-height: 20vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+  grid-column: 1/4;
+  grid-row: 1/2;
+
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.tasklist {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  color: orange; 
+}
+
+.tasklist ul {
+  padding: 0px;
+}
+
+.item {
+  color: white;
+  margin: 10px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1.5px 3px;
+  background-color: grey;
+  padding: 10px;
+  list-style-type: none;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+
+.modify-item {
+  display:none;
+  
+}
+
+.item:hover  {
+  background-color: lightgrey;
+  color: black;
+  
+}
+.item:hover .modify-item { 
+  display:block;
+};
