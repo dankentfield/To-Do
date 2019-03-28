@@ -1,7 +1,7 @@
-#To-Do
+# To-Do
 A simple to do application using React and material design. 
 
-###Features will include:
+### Features will include:
 
 1) Ability to add tasks {done}
 2) cross out tasks 
